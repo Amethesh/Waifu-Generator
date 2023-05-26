@@ -1,4 +1,6 @@
-# One day Project
+# Random Waifu generator
+
+## One Day Project - For learning Nextjs
 
 ## Getting Started
 
