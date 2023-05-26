@@ -24,11 +24,7 @@ export default function loading() {
           height: "500px",
           backgroundColor: "white",
         }}
-      >
-        {/* <Suspense fallback={<p>Loading..</p>}> */}
-
-        {/* </Suspense> */}
-      </div>
+      ></div>
     </section>
   );
 }
