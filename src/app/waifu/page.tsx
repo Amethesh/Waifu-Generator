@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import getWaifu from "./getWaifu";
 
 export default async function WaifuGenerator() {
@@ -9,10 +9,13 @@ export default async function WaifuGenerator() {
   const [waifuImage, setWaifuImage] = useState<string>(
     "https://i.waifu.pics/3DpVCc3.jpg"
   );
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const generateWaifu = async () => {
+    setIsLoading(true);
     const data = await getWaifu({ type, category });
     setWaifuImage(data.url);
+    setIsLoading(false);
   };
 
   const handleCategoryChange = (
@@ -43,12 +46,22 @@ export default async function WaifuGenerator() {
       </form>
       <button onClick={generateWaifu}>Generate</button>
       <div>
-        <Image
-          src={waifuImage}
-          alt="Random waifu image"
-          width={300}
-          height={500}
-        />
+        {isLoading ? (
+          <div
+            style={{
+              width: "300px",
+              height: "500px",
+              backgroundColor: "white",
+            }}
+          ></div>
+        ) : (
+          <Image
+            src={waifuImage}
+            alt="Random waifu image"
+            width={300}
+            height={500}
+          />
+        )}
       </div>
     </section>
   );
