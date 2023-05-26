@@ -3,9 +3,14 @@
 export interface WaifuProps {
   type: string;
   category: string;
+  waifuImage: string;
 }
 
-export default async function getWaifu({ type, category }: WaifuProps) {
+export default async function getWaifu({
+  type,
+  category,
+  waifuImage,
+}: WaifuProps) {
   console.log(type, category);
   const res = await fetch(`https://api.waifu.pics/${type}/${category}`, {
     cache: "no-store",

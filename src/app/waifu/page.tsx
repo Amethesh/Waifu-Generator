@@ -15,11 +15,13 @@ export default async function WaifuGenerator() {
     setWaifuImage(data.url);
   };
 
-  const handleCategoryChange = (event: any) => {
+  const handleCategoryChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
     setCategory(event.target.value);
   };
 
-  const handleTypeChange = (event: any) => {
+  const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setType(event.target.value);
   };
 
@@ -27,20 +29,16 @@ export default async function WaifuGenerator() {
     <section>
       <h1>This is waifu generator!</h1>
       <form>
-        <select>
-          <option value={category} onChange={handleCategoryChange}>
-            Category
-          </option>
-          <option value="choix-2">waifu</option>
-          <option value="choix-3">neko</option>
-          <option value="choix-4">shinobu</option>
-          <option value="choix-5">happy</option>
+        <select value={category} onChange={handleCategoryChange}>
+          <option>waifu</option>
+          <option>neko</option>
+          <option>shinobu</option>
+          <option>happy</option>
         </select>
 
         <select value={type} onChange={handleTypeChange}>
-          <option disabled>Type</option>
-          <option value="choix-2">sfw</option>
-          <option value="choix-3">nsfw</option>
+          <option>sfw</option>
+          <option>nsfw</option>
         </select>
       </form>
       <button onClick={generateWaifu}>Generate</button>
