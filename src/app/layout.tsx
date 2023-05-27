@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "AnimeMixer",
+  title: "Waifu Generator",
   description: "A website to generate random Anime Waifu, Wallpapers and more",
 };
 
