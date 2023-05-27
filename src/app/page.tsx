@@ -13,9 +13,16 @@ export default function Home() {
 
 	const generateWaifu = async () => {
 		setIsLoading(true);
-		const data = await getWaifu({ type, category });
-		setWaifuImage(data.url);
-		setIsLoading(false);
+
+		try {
+			const data = await getWaifu({ type, category });
+			setWaifuImage(data.url);
+		} catch (error) {
+			console.error(error);
+			// Display error message to the user
+		} finally {
+			setIsLoading(false);
+		}
 	};
 
 	const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -50,7 +57,11 @@ export default function Home() {
 					<button onClick={generateWaifu}>Generate</button>
 				</div>
 				<div className={styles.rightsection}>
-					{isLoading ? <div className={styles.loading}></div> : <img src={waifuImage} alt="Random waifu image" />}
+					{isLoading ? (
+						<span className={styles.loading}>Loading</span>
+					) : (
+						<img src={waifuImage} alt="Random waifu image" />
+					)}
 					<div className={styles.buttons}>
 						<button>Download</button>
 						<button>Copy Link</button>

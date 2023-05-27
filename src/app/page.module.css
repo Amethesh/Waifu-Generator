@@ -10,6 +10,7 @@
 
 .leftsection {
 	width: 500px;
+	min-height: 300px;
 	padding: 30px;
 	height: auto;
 	font-family: "Tilt Neon", monospace;
@@ -28,6 +29,7 @@
 	border-radius: 30px;
 	background: #f9c5d1;
 	box-shadow: 5px 5px 10px #caa0a9, -5px -5px 10px #ffeaf9;
+	/* height: 500px; */
 }
 
 .buttons {
@@ -37,22 +39,20 @@
 }
 
 .buttons button {
-	font-family: "Sora", monospace;
-	font-size: 14px;
-	font-weight: bold;
 	border: none;
 	padding: 6px;
 	border-radius: 5px;
 	color: #f9c5d1;
-	background: #2d325b;
 	box-shadow: 3px 3px 3px #caa0a9, -3px -3px 3px #ffeaf9;
 }
 
-.rightsection .loading {
+.rightsection span {
 	width: 300px;
+	height: 400px;
 	border-radius: 20px;
 	background-color: #2d325b;
 }
+
 .rightsection img {
 	width: 300px;
 	border-radius: 20px;
