@@ -135,15 +135,17 @@ button {
 	font-family: "Sora", monospace;
 	font-size: 14px;
 	font-weight: bold;
+	border: none;
 	text-decoration: none;
 	border-radius: 9px;
 	background: #2d325b;
-	box-shadow: 3px 3px 3px #caa0a9, -3px -3px 3px #ffeaf9;
+	box-shadow: 3px 3px 6px #caa0a9, -3px -3px 6px #ffeaf9;
 }
 
 button:active {
-	border-radius: 25px;
+	/* border-radius: 25px; */
 	border-radius: 9px;
+	border: none;
 	/* background: #64ed85; */
 	box-shadow: inset 3px 3px 6px #caa0a9, inset -3px -3px 6px #ffeaf9;
 }
@@ -185,4 +187,61 @@ input[type="checkbox"]:checked + label {
 	color: white;
 	background: #fea3e1;
 	box-shadow: inset 3px 3px 5px #af709b, inset -3px -3px 5px #ffd6ff;
+}
+
+#toggle {
+	width: 170px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* background-color: azure; */
+}
+
+#toggle h2 {
+	margin-left: 10px;
+	font-size: 20px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 800;
+}
+
+#toggle-lable {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 3rem;
+	padding: 0px;
+	box-shadow: 5px 5px 10px #e0b1bc, -5px -5px 10px #ffd9e6;
+	background: rgba(255, 255, 255, 0);
+	position: relative;
+	cursor: pointer;
+	border-radius: 1.6rem;
+}
+
+#toggle-lable::after {
+	content: "";
+	position: absolute;
+	left: 0.4rem;
+	width: 2.1rem;
+	height: 2.1rem;
+	border-radius: 50%;
+	background: #2d325b;
+	transition: all 0.4s ease;
+}
+
+#toggle-lable::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	background: #2d325b;
+	opacity: 0;
+	transition: all 0.4s ease;
+}
+
+#toggle-input:checked ~ #toggle-lable::before {
+	opacity: 1;
+}
+#toggle-input:checked ~ #toggle-lable::after {
+	left: 57%;
+	background: #fea3e1;
 }

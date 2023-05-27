@@ -56,14 +56,15 @@ export default function Home() {
 			<section className={styles.container}>
 				<div className={styles.leftsection}>
 					<main className={styles.text}>Select your Type</main>
-					<div className="toggle">
+					<div id="toggle">
 						<input
 							id="toggle-input"
 							type="checkbox"
 							checked={type === "nsfw"}
 							onChange={() => setType(type === "nsfw" ? "sfw" : "nsfw")}
 						/>
-						<label htmlFor="toggle-input"></label>
+						<label htmlFor="toggle-input" id="toggle-lable"></label>
+						<h2>NSFW</h2>
 					</div>
 					{type === "sfw" && (
 						<form className="check-form">
@@ -160,7 +161,7 @@ export default function Home() {
 				</div>
 				<div className={styles.rightsection}>
 					{isLoading ? (
-						<span className={styles.loading}>Loading</span>
+						<span className={styles.loading}></span>
 					) : (
 						<img id="downImg" src={waifuImage} alt="Random waifu image" />
 					)}

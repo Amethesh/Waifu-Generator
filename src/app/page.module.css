@@ -33,7 +33,10 @@
 	font-weight: 900;
 	background-image: linear-gradient(0deg, rgba(254, 219, 234, 1) 0%, rgba(187, 6, 123, 1) 100%);
 	color: transparent;
-	-webkit-background-clip: text;
+	-webkit-background-clip: text; /* Safari, Chrome, and Opera */
+	-moz-background-clip: text; /* Firefox */
+	-ms-background-clip: text; /* Internet Explorer */
+	background-clip: text;
 }
 
 .rightsection {
@@ -60,6 +63,11 @@
 	box-shadow: 3px 3px 3px #caa0a9, -3px -3px 3px #ffeaf9;
 }
 
+.buttons button:active {
+	border: none;
+	box-shadow: inset 3px 3px 6px #caa0a9, inset -3px -3px 6px #ffeaf9;
+}
+
 .rightsection span {
 	width: 300px;
 	height: 400px;
@@ -74,5 +82,6 @@
 
 .generate {
 	margin-top: 30px;
-	padding: 20px;
+	padding: 15px;
+	font-size: 25px;
 }
