@@ -166,3 +166,41 @@ button:hover {
 	background-position: 0 0, 0 0;
 	transition-duration: 0.9s;
 }
+/* 
+input {
+	width: 20px;
+} */
+
+/*! CHECK TILE */
+
+input[type="checkbox"]:not(:checked),
+input[type="checkbox"]:checked {
+	position: absolute;
+	left: -9999%;
+}
+
+.check-form {
+	width: 100%;
+	/* background-color: bisque; */
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+
+input[type="checkbox"] + label {
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: 20px;
+	color: black;
+	background-color: #2d325b;
+	margin-bottom: 10px;
+	background: #fea3e1;
+	box-shadow: 5px 5px 10px #e0b1bc, -5px -5px 10px #ffd9e6;
+}
+
+input[type="checkbox"]:checked + label {
+	color: white;
+	background: #fea3e1;
+	box-shadow: inset 3px 3px 5px #af709b, inset -3px -3px 5px #ffd6ff;
+}
