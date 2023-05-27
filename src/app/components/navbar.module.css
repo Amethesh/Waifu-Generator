@@ -1,22 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
 .container {
 	display: flex;
 	justify-content: center;
+	font-family: "Tilt Neon", monospace;
+	font-size: 40px;
+	text-decoration: none;
+	padding: 6px;
 }
 
 .navbar {
 	display: flex;
-	justify-self: center;
+	justify-content: space-around;
 	align-items: center;
 	margin-top: 20px;
 	padding: 10px;
-	width: max-content;
-	border-radius: 50px;
+	width: 800px;
+	border-radius: 30px;
 	background: #f9c5d1;
 	box-shadow: 5px 5px 9px #d4aab8, -5px -5px 9px #ffe6fa;
-}
-
-.imagewrapper {
-	width: max-content;
-	background-color: antiquewhite;
-	margin: 6px;
 }

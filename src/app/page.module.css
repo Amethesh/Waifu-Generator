@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;700&family=Space+Grotesk:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+.container {
+	margin-top: 50px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.leftsection {
+	width: 500px;
+	padding: 30px;
+	height: auto;
+	font-family: "Tilt Neon", monospace;
+	font-weight: bold;
+	font-size: 20px;
+	color: #2d325b;
+	border-radius: 30px;
+	background: #f9c5d1;
+	box-shadow: 15px 15px 30px #deafba, -15px -15px 30px #ffdbe8;
+}
+
+.rightsection {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	border-radius: 30px;
+	background: #f9c5d1;
+	box-shadow: 5px 5px 10px #caa0a9, -5px -5px 10px #ffeaf9;
+}
+
+.buttons {
+	margin: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.buttons button {
+	font-family: "Sora", monospace;
+	font-size: 14px;
+	font-weight: bold;
+	border: none;
+	padding: 6px;
+	border-radius: 5px;
+	color: #f9c5d1;
+	background: #2d325b;
+	box-shadow: 3px 3px 3px #caa0a9, -3px -3px 3px #ffeaf9;
+}
+
+.rightsection .loading {
+	width: 300px;
+	border-radius: 20px;
+	background-color: #2d325b;
+}
+.rightsection img {
+	width: 300px;
+	border-radius: 20px;
+}

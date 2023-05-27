@@ -110,8 +110,22 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+Link {
+	text-decoration: none;
+}
+/*! FONTS IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;700&family=Space+Grotesk:wght@300;400;500;700&display=swap");
 
 body {
 	background-color: #f9c8d9;
 	color: aliceblue;
+	font-family: "Sora", monospace;
+}
+
+#links {
+	/* font-size: 80px; */
+	color: #2d325b;
+	text-decoration: none;
 }
