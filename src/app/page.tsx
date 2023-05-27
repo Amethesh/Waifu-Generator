@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
       </Head>
       <main className={styles.main}>This is the Home Page</main>
       <section>
