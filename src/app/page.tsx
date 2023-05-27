@@ -31,8 +31,21 @@ export default function Home() {
 		setCategory(value);
 	};
 
-	const handleTypeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-		setType(event.target.value);
+	const handleDownload = () => {
+		// Trigger the download
+		const link = document.createElement("a");
+		link.href = waifuImage;
+		link.download = "waifu_image.jpg";
+		link.style.display = "none";
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+
+	const handleCopyLink = () => {
+		// Copy the image URL to the clipboard
+		navigator.clipboard.writeText(waifuImage);
+		alert("Image link copied to clipboard!");
 	};
 
 	return (
@@ -149,14 +162,14 @@ export default function Home() {
 					{isLoading ? (
 						<span className={styles.loading}>Loading</span>
 					) : (
-						<img src={waifuImage} alt="Random waifu image" />
+						<img id="downImg" src={waifuImage} alt="Random waifu image" />
 					)}
 					<div className={styles.buttons}>
-						<button>
+						<button onClick={handleDownload}>
 							<FontAwesomeIcon icon={faDownload} style={{ marginRight: "5px" }} />
 							Download
 						</button>
-						<button>
+						<button onClick={handleCopyLink}>
 							<FontAwesomeIcon icon={faLink} style={{ marginRight: "5px" }} />
 							Copy Link
 						</button>
