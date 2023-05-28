@@ -9,7 +9,18 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
 	title: "Waifu Generator",
-	description: "A website to generate random Anime Waifu, Wallpapers and more"
+	description: "A website to generate random Anime Waifu, Wallpapers and more",
+	keywords: [
+		"waifu",
+		"generator",
+		"random waifu",
+		"waifu generator",
+		"random generator",
+		"random waifu generator",
+		"nsfw generator",
+		"nsfw waifu",
+		"waifu gifs"
+	]
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -133,6 +133,60 @@ export default function Home() {
 								/>
 								<label htmlFor="cuddle">Cuddle</label>
 							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="smile"
+									checked={category.includes("smile")}
+									onChange={() => handleCategoryChange("smile")}
+								/>
+								<label htmlFor="smile">Smile</label>
+							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="highfive"
+									checked={category.includes("highfive")}
+									onChange={() => handleCategoryChange("highfive")}
+								/>
+								<label htmlFor="highfive">Highfive</label>
+							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="happy"
+									checked={category.includes("happy")}
+									onChange={() => handleCategoryChange("happy")}
+								/>
+								<label htmlFor="happy">Happy</label>
+							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="dance"
+									checked={category.includes("dance")}
+									onChange={() => handleCategoryChange("dance")}
+								/>
+								<label htmlFor="dance">Dance</label>
+							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="wink"
+									checked={category.includes("wink")}
+									onChange={() => handleCategoryChange("wink")}
+								/>
+								<label htmlFor="wink">Wink</label>
+							</div>
+							<div>
+								<input
+									type="checkbox"
+									id="wave"
+									checked={category.includes("wave")}
+									onChange={() => handleCategoryChange("wave")}
+								/>
+								<label htmlFor="wave">Wave</label>
+							</div>
 						</form>
 					)}
 					{type === "nsfw" && (

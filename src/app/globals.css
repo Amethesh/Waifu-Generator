@@ -168,6 +168,8 @@ input[type="checkbox"]:checked {
 	/* background-color: bisque; */
 	display: grid;
 	grid-template-columns: auto auto auto auto;
+	margin-top: 30px;
+	margin-bottom: 20px;
 }
 
 input[type="checkbox"] + label {
@@ -194,6 +196,7 @@ input[type="checkbox"]:checked + label {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-top: 20px;
 	/* background-color: azure; */
 }
 
