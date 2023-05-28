@@ -20,7 +20,7 @@ export default async function getWaifu({ type, category }: WaifuProps) {
 
 	try {
 		const responseData = await Promise.race([timeoutPromise, fetchPromise]);
-		console.log(`Response:`, responseData);
+		console.log("Response:", responseData);
 		return responseData;
 	} catch (error) {
 		console.error(error);
