@@ -1,8 +1,8 @@
 "use client";
 import styles from "./page.module.css";
 import Head from "next/head";
-import Image from "next/image";
-import { useState } from "react";
+// import Image from "next/image";
+import { useState, useRef } from "react";
 import getWaifu from "./getWaifu";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faLink } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +13,19 @@ export default function Home() {
 	const [waifuImage, setWaifuImage] = useState<string>("https://i.waifu.pics/3DpVCc3.jpg");
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 
+	const imgRef = useRef(null);
+
+	//!Setting the image source to transparent base64 encoded GIF
+	function cancelImageLoading(imgElement: HTMLImageElement | null) {
+		if (imgElement) {
+			console.log("Canceled");
+			imgElement.src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEAAAAALAAAAAABAAEAAAI=";
+		}
+	}
+
 	const generateWaifu = async () => {
 		setIsLoading(true);
+		cancelImageLoading(imgRef.current);
 
 		try {
 			const data = await getWaifu({ type, category });
@@ -163,7 +174,7 @@ export default function Home() {
 					{isLoading ? (
 						<span className={styles.loading}></span>
 					) : (
-						<img id="downImg" src={waifuImage} alt="Random waifu image" />
+						<img ref={imgRef} id="downImg" src={waifuImage || ""} alt="Random waifu image" />
 					)}
 					<div className={styles.buttons}>
 						<button onClick={handleDownload}>
