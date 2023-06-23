@@ -120,6 +120,7 @@ Link {
 
 body {
 	background-color: #f9c8d9;
+	/* background-color: #ffff; */
 	color: aliceblue;
 	font-family: "Sora", monospace;
 }
